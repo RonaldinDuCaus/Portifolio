@@ -34,6 +34,9 @@
       </div>
       <div class="atalhos" aria-label="Projetos nesta página">
         <a href="#conhecimentos">Conhecimentos técnicos</a>
+        <a href="#primeiro-ano">Fundamentos de computação</a>
+        <a href="#maquete">Maquete do 2º ano</a>
+        <a href="#redes-2025">Redes em 2025</a>
         <a href="#esteira">Mini Fábrica</a>
         <a href="#camera">Identificador de imagens</a>
         <a href="#lixeira">Lixeira automática</a>
@@ -54,6 +57,55 @@
           <dt>HTML e CSS</dt>
           <dd>No próprio portfólio, o HTML organiza o menu, os títulos e as fichas de projeto. Na <a href="css/estilo.css">folha de estilos</a>, o CSS Grid coloca os cartões lado a lado no computador e em uma coluna no celular.</dd>
         </dl>
+      </section>
+      <section id="primeiro-ano" class="projeto">
+        <p class="micro">2024 · 1º ano</p>
+        <h2>Conhecendo o computador por dentro</h2>
+        <p>Comecei pelo hardware. Aprendi a reconhecer os componentes do computador e a entender o papel de cada um: o processador executa instruções, a memória RAM guarda o que está em uso e o armazenamento mantém os arquivos quando o computador é desligado.</p>
+        <dl>
+          <dt>Formatação e manutenção</dt>
+          <dd>Estudei formatação, instalação do sistema operacional e conserto de computadores. Uma das primeiras questões de diagnóstico é saber se o computador chega a ligar ou se ele liga e o sistema falha ao iniciar.</dd>
+          <dt>Pacote Office e primeiros passos com Arduino</dt>
+          <dd>Aprendi a trabalhar com documentos, planilhas e apresentações. Também comecei a estudar Arduino e a entender como um programa pode controlar uma saída da placa.</dd>
+        </dl>
+      </section>
+      <article id="maquete" class="projeto">
+        <p class="micro">2025 · Projeto em grupo</p>
+        <h2>A maquete do 2º ano</h2>
+        <p>No segundo ano do Ensino Médio, construímos uma maquete em grupo. Ela faz parte dos meus registros de montagem no Senac. Nesse mesmo ano, nas aulas de redes, aprendi a calcular endereços IP e a entender como computadores e servidores se comunicam.</p>
+        <p><a href="#redes-2025">Ver um exemplo de cálculo de IP ↓</a></p>
+      </article>
+      <section id="redes-2025" class="projeto">
+        <p class="micro">2025 · 2º ano</p>
+        <h2>Redes, servidores e protocolos</h2>
+        <div class="ficha">
+          <div>
+            <p>Em redes, aprendi a usar o endereço IPv4 e a máscara para descobrir quais dispositivos pertencem à mesma sub-rede. Em servidores e protocolos, a pergunta era outra: depois de localizar um computador, como pedir um serviço a ele?</p>
+            <dl>
+              <dt>Cliente e servidor</dt>
+              <dd>Quando abro um site, o navegador faz o papel de cliente. Ele pede uma página e o servidor envia uma resposta.</dd>
+              <dt>Protocolos de rede</dt>
+              <dd>O DNS permite consultar o endereço associado a um nome. O DHCP pode fornecer ao dispositivo um IP e outras configurações de rede. O HTTP define como o navegador pede a página e como o servidor responde.</dd>
+            </dl>
+          </div>
+          <aside class="bloco" aria-labelledby="calculo-ip">
+            <p class="micro">Exemplo de estudo</p>
+            <h3 id="calculo-ip">Onde entra o IP 192.168.10.82/26?</h3>
+            <p>O prefixo /26 deixa 6 dos 32 bits para os endereços dentro de cada sub-rede. São 2⁶ = 64 endereços por bloco. O último número, 82, cai no bloco que vai de 64 a 127.</p>
+            <dl>
+              <dt>Máscara</dt><dd>255.255.255.192</dd>
+              <dt>Endereço da rede</dt><dd>192.168.10.64</dd>
+              <dt>Faixa para os dispositivos</dt><dd>192.168.10.65 até 192.168.10.126 (62 endereços)</dd>
+              <dt>Broadcast</dt><dd>192.168.10.127</dd>
+            </dl>
+          </aside>
+        </div>
+        <details>
+          <summary>O que o Senac prevê para o 2º ano de IoT?</summary>
+          <p>O plano de curso do Ensino Médio Técnico em Internet das Coisas do Senac SP reserva 240 horas para a formação técnica e profissional do segundo ano. Entre as competências previstas estão instalar redes locais, trabalhar com redes sem fio e protocolos de IoT, integrar tecnologias, cuidar da segurança dos dispositivos e desenvolver automação acessível.</p>
+          <p>A programação pública apresenta as competências por ano. As datas das aulas da minha turma em 2025 não constam nesse plano.</p>
+          <a href="https://www.sp.senac.br/documents/20125/37044884/298_PC_Internet_Coisas_integrado_Ensino_Medio.pdf/ad17ab72-34b2-03d5-413c-a64f787764bb?t=1630678902181">Consultar o plano de curso do Senac SP (PDF) ↗</a>
+        </details>
       </section>
       <article id="esteira" class="projeto">
         <div class="ficha">
