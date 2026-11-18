@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Início no portfólio de Ronald Wolney Willwohl França, estudante de Internet das Coisas no Senac.">
+    <title>Início | Ronald Wolney Willwohl França</title>
+    <link rel="stylesheet" href="css/estilo.css">
+  </head>
+  <body>
+    <a class="skip" href="#principal">Pular para o conteúdo</a>
+    <!-- O menu é HTML comum. aria-current indica a página aberta para leitores de tela. -->
+    <header>
+      <div class="barra wrap">
+        <a class="marca" href="index.html" aria-label="Portfólio de Ronald, início">
+          <b aria-hidden="true">RW</b> Portfólio</a>
+        <nav aria-label="Navegação principal">
+          <a href="index.html" aria-current="page">Início</a>
+          <a href="areas-do-saber.html">Áreas do Saber</a>
+          <a href="formacao-tecnica.html">Formação Técnica</a>
+          <a href="curriculo.html">Currículo</a>
+          <a href="memorias.html">Memórias</a>
+          <a href="jornada.html">Jornada de Aprendizagem</a>
+          <a href="contato.html">Contato</a>
+        </nav>
+      </div>
+    </header>
+    <!-- As páginas ficam no mesmo nível. Caminhos relativos também funcionam depois de extrair o ZIP. -->
+    <main id="principal" class="wrap">
+      <section class="hero" aria-labelledby="nome">
+        <div>
+          <p class="micro">Ensino Médio Técnico · Senac</p>
+          <h1 id="nome">Ronald Wolney<span>Willwohl França</span>
+          </h1>
+          <p class="lead">Estudo Internet das Coisas. Nos projetos, minha parte costuma ser montar os componentes, pensar na lógica e programar o que acontece quando um sensor responde.</p>
+          <div class="links">
+            <a class="botao" href="formacao-tecnica.html">Explorar projetos <span aria-hidden="true">→</span>
+            </a>
+            <a class="texto-link" href="jornada.html">Minha trajetória</a>
+          </div>
+        </div>
+        <figure class="prancha">
+          <img src="imagens/esteira.webp" alt="Ilustração em perspectiva da Mini Fábrica, com correia, motor e câmera acima da peça.">
+          <figcaption>
+            <span>Mini Fábrica Inteligente</span>
+            <span>Esquema do projeto</span>
+          </figcaption>
+        </figure>
+      </section>
+      <section class="secao" aria-labelledby="destaques">
+        <div class="linha-topo">
+          <h2 id="destaques">Projetos em destaque</h2>
+          <a class="texto-link" href="formacao-tecnica.html">Ver formação técnica <span aria-hidden="true">→</span>
+          </a>
+        </div>
+        <div class="grade">
+          <a class="card" href="formacao-tecnica.html#esteira">
+            <img src="imagens/esteira.webp" alt="Ilustração de uma esteira com câmera e motor">
+            <div class="corpo">
+              <p class="micro">ESP32 · Automação</p>
+              <h3>Mini Fábrica Inteligente <span aria-hidden="true">↗</span>
+              </h3>
+              <p>Uma esteira que percebe a chegada de uma peça e para no ponto de leitura.</p>
+            </div>
+          </a>
+          <a class="card" href="formacao-tecnica.html#camera">
+            <img src="imagens/camera.webp" alt="Ilustração de um módulo de câmera">
+            <div class="corpo">
+              <p class="micro">ESP32-CAM · Visão computacional</p>
+              <h3>Identificador de imagens <span aria-hidden="true">↗</span>
+              </h3>
+              <p>Uma câmera envia a imagem e o computador fala o nome do objeto reconhecido.</p>
+            </div>
+          </a>
+          <a class="card" href="formacao-tecnica.html#lixeira">
+            <img src="imagens/lixeira.webp" alt="Ilustração da tampa e do sensor de uma lixeira">
+            <div class="corpo">
+              <p class="micro">Arduino · Sensores</p>
+              <h3>Lixeira automática <span aria-hidden="true">↗</span>
+              </h3>
+              <p>A distância medida por ultrassom decide quando o servo deve abrir a tampa.</p>
+            </div>
+          </a>
+        </div>
+      </section>
+      <section class="secao">
+        <div class="ficha">
+          <h2>Do primeiro ano<br>à bancada de IoT.</h2>
+          <div>
+            <p class="lead">Comecei o Ensino Médio no Senac em 2024. Agora, no 3º ano, reúno os registros que ajudam a explicar como saí de uma ideia para um circuito que dá para testar.</p>
+            <p>
+              <a href="memorias.html">Abrir meu caderno de memórias →</a>
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="rodape wrap">
+        <span>Ronald Wolney Willwohl França · Senac · 2024–2026</span>
+        <div class="links">
+          <a href="https://github.com/RonaldinDuCaus">GitHub</a>
+          <a href="https://www.linkedin.com/in/ronald-wolney-willwohl-fran%C3%A7a-411b18274/">LinkedIn</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
