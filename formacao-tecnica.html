@@ -35,7 +35,7 @@
       <div class="atalhos" aria-label="Projetos nesta página">
         <a href="#conhecimentos">Conhecimentos técnicos</a>
         <a href="#primeiro-ano">Fundamentos de computação</a>
-        <a href="#maquete">Maquete do 2º ano</a>
+        <a href="#maquete">Maquete da P1</a>
         <a href="#redes-2025">Redes em 2025</a>
         <a href="#esteira">Mini Fábrica</a>
         <a href="#camera">Identificador de imagens</a>
@@ -49,7 +49,7 @@
           <dt>Internet das Coisas (IoT)</dt>
           <dd>Na <a href="#esteira">Mini Fábrica</a>, o ESP32 lê o sensor de distância e comanda o motor para parar a correia quando uma peça chega.</dd>
           <dt>Redes de computadores</dt>
-          <dd>No <a href="#camera">identificador de imagens</a>, a ESP32-CAM se conecta por Wi-Fi e envia uma foto por HTTP a um servidor local. O nome do objeto volta pela rede para aparecer no display.</dd>
+          <dd>Na <a href="#maquete">rede da P1</a>, usei o Cisco Packet Tracer para conectar os equipamentos e configurar o endereçamento IP. No <a href="#camera">identificador de imagens</a>, a ESP32-CAM se conecta por Wi-Fi e envia uma foto por HTTP a um servidor local. O nome do objeto volta pela rede para aparecer no display.</dd>
           <dt>Programação em C</dt>
           <dd>Variáveis e condições permitem decidir o que fazer a partir de uma leitura. No <a href="codigos/lixeira.cpp">código da lixeira</a>, escrito em C++ para Arduino, a condição <code>distancia &gt; 0 &amp;&amp; distancia &lt;= distanciaLimite</code> aplica essa lógica para decidir quando abrir a tampa.</dd>
           <dt>Programação em Java</dt>
@@ -71,8 +71,17 @@
       </section>
       <article id="maquete" class="projeto">
         <p class="micro">2025 · Projeto em grupo</p>
-        <h2>A maquete do 2º ano</h2>
-        <p>No segundo ano do Ensino Médio, construímos uma maquete em grupo. Ela faz parte dos meus registros de montagem no Senac. Nesse mesmo ano, nas aulas de redes, aprendi a calcular endereços IP e a entender como computadores e servidores se comunicam.</p>
+        <h2>Maquete da P1 · Praça de Alimentação 1 do Senac</h2>
+        <p>No 2º ano, a turma recriou partes do Senac em maquete. Meu grupo ficou com a P1, a Praça de Alimentação 1. O trabalho tinha duas entregas: construir a maquete do espaço e fazer a rede funcionar no Cisco Packet Tracer.</p>
+        <dl>
+          <dt>Montagem e cabeamento</dt>
+          <dd>Construímos a maquete da praça de alimentação. No simulador, montamos a rede com computadores, câmeras e um servidor e ligamos os equipamentos com o cabeamento de rede.</dd>
+          <dt>Configuração e resultado</dt>
+          <dd>Configuramos os computadores, atribuímos os endereços IP e ajustamos a rede até os dispositivos se comunicarem na simulação.</dd>
+          <dt>O que aprendi</dt>
+          <dd>Aprendi a usar o Cisco Packet Tracer para montar e configurar uma rede. O cálculo de IP ganhou um uso prático: entender quais endereços eu podia atribuir aos equipamentos para que se comunicassem na mesma sub-rede.</dd>
+        </dl>
+        <p>O exemplo abaixo mostra como faço esse cálculo com uma rede de estudo.</p>
         <p><a href="#redes-2025">Ver um exemplo de cálculo de IP ↓</a></p>
       </article>
       <section id="redes-2025" class="projeto">
