@@ -1,0 +1,120 @@
+/* Cores e medidas compartilhadas mantêm as sete páginas com a mesma identidade. */
+:root {
+  --papel: #f8f7f1;
+  --tinta: #182d2d;
+  --suave: #495e59;
+  --linha: #cbd1c6;
+  --verde: #175347;
+  --ambar: #f3aa62;
+  --mono: "IBM Plex Mono", Consolas, "Liberation Mono", monospace;
+  --texto: "DM Sans", "Segoe UI", Arial, sans-serif;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 1.5rem; }
+body { margin: 0; background: var(--papel); color: var(--tinta); font: 1rem/1.65 var(--texto); }
+a { color: var(--verde); text-underline-offset: .23em; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible, summary:focus-visible, video:focus-visible { outline: 3px solid #af591c; outline-offset: 4px; }
+img, video { display: block; width: 100%; height: auto; }
+figure, h1, h2, h3, p { margin: 0; }
+h1, h2, h3 { line-height: 1.08; letter-spacing: -.052em; }
+h1 { font-size: clamp(3rem, 6vw, 6.3rem); font-weight: 650; }
+h2 { font-size: clamp(1.95rem, 3.2vw, 3.1rem); font-weight: 630; }
+h3 { font-size: 1.43rem; letter-spacing: -.036em; }
+p + p { margin-top: .8rem; }
+.wrap { width: min(1340px, 90%); margin-inline: auto; }
+.skip { position: absolute; left: 1rem; top: -6rem; z-index: 3; background: white; padding: .6rem; }
+.skip:focus { top: .5rem; }
+header { border-bottom: 1px solid var(--linha); }
+.barra, nav, .marca, .links, .rodape, .linha-topo { display: flex; align-items: center; }
+.barra { justify-content: space-between; gap: 1.3rem; min-height: 78px; }
+.marca { color: var(--tinta); text-decoration: none; gap: .7rem; font-weight: 680; letter-spacing: -.045em; font-size: 1.22rem; white-space: nowrap; }
+.marca b { display: grid; place-items: center; width: 41px; height: 39px; background: var(--tinta); color: var(--ambar); font: bold 1.12rem var(--mono); letter-spacing: -.13em; padding-right: 2px; }
+nav { flex-wrap: wrap; column-gap: clamp(.7rem, 1.6vw, 1.8rem); }
+nav a { padding: .55rem 0; font-size: .86rem; font-weight: 550; color: var(--suave); text-decoration: none; border-bottom: 2px solid transparent; }
+nav a[aria-current="page"], nav a:hover { color: var(--verde); border-bottom-color: var(--verde); }
+.micro { font: 650 .73rem/1.5 var(--mono); text-transform: uppercase; letter-spacing: .105em; color: var(--verde); }
+.hero { display: grid; grid-template-columns: 1fr 1.12fr; align-items: center; gap: 5%; padding-block: clamp(2.8rem, 5vw, 5.4rem); }
+.hero .micro, .intro .micro { display:flex; gap:.6rem; align-items:center; margin-bottom: 1.15rem; }
+.hero .micro::before, .intro .micro::before { content:""; width: 1.8rem; height: 2px; background: #a05c2c; }
+.hero h1 { font-size: clamp(3rem,5.25vw,5.6rem); }
+.hero h1 span { display:block; color: var(--verde); }
+.lead { color: var(--suave); font-size: clamp(1.05rem, 1.6vw, 1.25rem); max-width: 64ch; line-height: 1.6; }
+.hero .lead { margin: 1.4rem 0 1.85rem; max-width: 42ch; }
+.links { flex-wrap: wrap; gap: .75rem 1.2rem; }
+.botao, .texto-link { display: inline-flex; align-items: center; justify-content: center; gap: .6rem; font-size: .95rem; font-weight: 650; }
+.botao { background: var(--verde); padding: .75rem 1.15rem; color: #fff; text-decoration: none; border: 1px solid var(--verde); border-radius: 3px; }
+.botao:hover { background: #0c3d35; }
+.texto-link { padding-block: .4rem; }
+.prancha { background: #132829; border: 1px solid #354b48; color: #f4f5e7; overflow: hidden; border-radius: 4px; }
+.prancha figcaption { border-top:1px solid #425952; display:flex; justify-content:space-between; align-items:center; gap:1rem; padding: .75rem 1rem; font: .72rem/1.4 var(--mono); }
+.prancha figcaption span:first-child { color: #fac28a; }
+.secao { padding-block: clamp(2.8rem, 4.6vw, 5rem); border-top: 1px solid var(--linha); }
+.linha-topo { justify-content: space-between; gap: 1rem; margin-bottom: 1.6rem; align-items: end; }
+.grade { display: grid; gap: 1.4rem; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.card { overflow:hidden; display:block; color:var(--tinta); text-decoration:none; border:1px solid var(--linha); background:#fcfbf6; border-radius:4px; transition: border-color .18s, transform .18s; }
+.card:hover { border-color:var(--verde); transform:translateY(-3px); }
+.card img { height: clamp(135px,13vw,200px); object-fit: cover; }
+.card .corpo { padding:1.2rem 1.35rem 1.45rem; }
+.card h3 { display:flex; justify-content:space-between; gap:.4rem; margin:.45rem 0 .7rem; }
+.card h3 span { color:var(--verde); font-size:1.15rem; }
+.card p, .bloco p, .ficha p, .passo p, .registro p { color:var(--suave); }
+.intro { padding-block:3.3rem 2.7rem; }
+.intro h1 { margin:.4rem 0 1rem; font-size:clamp(2.8rem,5vw,5rem); }
+.atalhos { display:flex; flex-wrap:wrap; gap:.7rem 1.4rem; border-block:1px solid var(--linha); padding-block:.9rem; }
+.atalhos a { font-size:.94rem; font-weight:600; }
+.projeto { padding-block:3rem; border-bottom:1px solid var(--linha); }
+.projeto:last-child { border:0; }
+.ficha { display:grid; grid-template-columns:1.05fr 1fr; gap:5%; align-items:start; }
+.projeto h2,.bloco h2,.registro h2,.passo h2 { margin:.45rem 0 1rem; }
+.ficha figure img,.registro img,video,.foto { border:1px solid var(--linha); border-radius:4px; }
+figcaption { font-size:.84rem; color:var(--suave); padding-top:.55rem; }
+.prancha figcaption { color:#f1f4e9; }
+dl { margin:1.2rem 0; }
+dt { font-weight:700; margin-top:.85rem; }
+dd { margin:0; color:var(--suave); }
+details { border-top:1px solid var(--linha); padding:.8rem 0; margin:.6rem 0; }
+summary { color:var(--verde); cursor:pointer; font-weight:650; }
+details p { margin:.65rem 0; }
+pre { background:#142a29; color:#e3eedc; padding:1.15rem; overflow-x:auto; border-radius:3px; font:.85rem/1.6 var(--mono); }
+.duas { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1.6rem; }
+.bloco, .registro { padding:1.6rem; border:1px solid var(--linha); border-radius:4px; background:#fcfbf6; }
+.bloco h2,.registro h2 { font-size:1.75rem; }
+.bloco ul { padding-left:1.2rem; margin-bottom:0; }
+.bloco .links,.registro .links { margin-top:1rem; }
+.conteudo { padding-bottom:3.2rem; }
+.registro img { height:230px; object-fit:cover; }
+.registro .painel { object-fit:contain; background:#e9ede6; }
+.registro .micro { margin-top:1.2rem; }
+.passo { display:grid; grid-template-columns:150px 1fr; gap:2rem; padding:1.7rem 0; border-top:1px solid var(--linha); }
+.passo h2 { font-size:1.6rem; margin-top:0; }
+.passo p { max-width:74ch; }
+.passo .micro { border-left:3px solid #c27a41; padding-left:.7rem; align-self:start; }
+footer { border-top:1px solid var(--linha); padding:1.35rem 0; }
+.rodape { justify-content:space-between; gap:1rem; font-size:.84rem; color:var(--suave); flex-wrap:wrap; }
+.rodape a { font-weight:650; }
+@media(max-width:1050px) {
+ .barra { align-items:flex-start; flex-direction:column; gap:.3rem; padding:.8rem 0 .4rem; }
+ nav { gap:0 1.2rem; }
+}
+@media(max-width:760px) {
+ /* Uma coluna preserva a ordem de leitura do HTML nas telas estreitas. */
+ .hero,.ficha,.duas,.grade { grid-template-columns:1fr; }
+ .hero,.ficha { gap:1.65rem; } .wrap { width:90%; }
+ .hero h1 { font-size:clamp(3rem,9vw,4.6rem); }
+ .linha-topo { align-items:flex-start; flex-direction:column; }
+ .card img { height:auto; aspect-ratio: 2.4; }
+ .passo { grid-template-columns:1fr; gap:.7rem; }
+ nav { column-gap:1rem; } nav a { padding:.33rem 0; }
+ .bloco,.registro { padding:1.15rem; }
+ .hero { padding-block:2.4rem; }
+}
+@media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } .card { transition:none; } .card:hover { transform:none; } }
+/* Datas, títulos e instituições continuam juntos quando a lista de cursos muda de largura. */
+.antes { margin-bottom: 2rem; }
+.historico { margin: 0; padding: 0; list-style: none; }
+.historico li { display: flex; align-items: baseline; gap: 1.5rem; border-top: 1px solid var(--linha); padding: .8rem 0; color: var(--suave); }
+.historico strong { color: var(--tinta); }
+.data { min-width: 6.5rem; color: var(--verde); font: .84rem var(--mono); }
+.hero > *, .ficha > *, .duas > * { min-width: 0; }
+@media(max-width:430px) { .historico li { display: grid; gap: .2rem; } }

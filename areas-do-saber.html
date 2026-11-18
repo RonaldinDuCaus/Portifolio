@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Áreas do Saber no portfólio de Ronald Wolney Willwohl França, estudante de Internet das Coisas no Senac.">
+    <title>Áreas do Saber | Ronald Wolney Willwohl França</title>
+    <link rel="stylesheet" href="css/estilo.css">
+  </head>
+  <body>
+    <a class="skip" href="#principal">Pular para o conteúdo</a>
+    <!-- O menu é HTML comum. aria-current indica a página aberta para leitores de tela. -->
+    <header>
+      <div class="barra wrap">
+        <a class="marca" href="index.html" aria-label="Portfólio de Ronald, início">
+          <b aria-hidden="true">RW</b> Portfólio</a>
+        <nav aria-label="Navegação principal">
+          <a href="index.html">Início</a>
+          <a href="areas-do-saber.html" aria-current="page">Áreas do Saber</a>
+          <a href="formacao-tecnica.html">Formação Técnica</a>
+          <a href="curriculo.html">Currículo</a>
+          <a href="memorias.html">Memórias</a>
+          <a href="jornada.html">Jornada de Aprendizagem</a>
+          <a href="contato.html">Contato</a>
+        </nav>
+      </div>
+    </header>
+    <!-- As páginas ficam no mesmo nível. Caminhos relativos também funcionam depois de extrair o ZIP. -->
+    <main id="principal" class="wrap">
+      <div class="intro">
+        <p class="micro">Ensino Médio</p>
+        <h1>Áreas do Saber</h1>
+        <p class="lead">Quatro maneiras de olhar para os trabalhos do curso. Uma leitura do sensor vira uma conta, uma decisão no programa e uma pergunta sobre quem vai usar o resultado.</p>
+      </div>
+      <section class="duas conteudo" aria-label="Quatro áreas do conhecimento">
+        <article class="bloco">
+          <p class="micro">Fenômenos e experimentos</p>
+          <h2>Ciências da Natureza</h2>
+          <p>Na lixeira automática, o sensor emite um pulso de ultrassom e mede o tempo até o eco voltar. A distância aparece no programa porque o som percorre duas vezes o caminho entre o sensor e a mão.</p>
+          <details>
+            <summary>Como isso aparece no código?</summary>
+            <p>O programa multiplica a duração do eco, em microssegundos, por 0,034 cm/µs e divide por dois. A divisão desconta a viagem de volta.</p>
+          </details>
+          <a href="formacao-tecnica.html#lixeira">Consultar o projeto da lixeira →</a>
+        </article>
+        <article class="bloco">
+          <p class="micro">Tecnologia e sociedade</p>
+          <h2>Ciências Humanas</h2>
+          <p>Em 2024, meu grupo pesquisou como os jovens chegavam ao Senac. Entrevistamos estudantes sobre a rotina e os meios de transporte e reunimos os resultados em um blog.</p>
+          <details>
+            <summary>Reflexão sobre o projeto</summary>
+            <p>O endereço da escola era o mesmo para todos. As entrevistas mostraram que o percurso até ela fazia parte de rotinas diferentes. O blog foi a forma que encontramos de apresentar essas experiências lado a lado.</p>
+          </details>
+          <a href="memorias.html#mobilidade">Ler a memória do projeto social →</a>
+        </article>
+        <article class="bloco">
+          <p class="micro">Leitura e escrita</p>
+          <h2>Linguagens</h2>
+          <p>No Entrelinhas, organizei um diário de leitura digital. Autor, título e número de páginas ajudam a identificar a obra. O campo de anotações guarda a interpretação de quem lê.</p>
+          <details>
+            <summary>Uma escolha de linguagem</summary>
+            <p>“Quero ler”, “Lendo” e “Concluído” nomeiam situações diferentes. Esses rótulos deixam clara a ação que o leitor está registrando.</p>
+          </details>
+          <a href="https://github.com/RonaldinDuCaus/entrelinhas-leituras">Ver o diário no GitHub ↗</a>
+        </article>
+        <article class="bloco">
+          <p class="micro">Medidas e comparação</p>
+          <h2>Matemática</h2>
+          <p>Na esteira, a referência de fundo foi de 96,9 mm. Subtrair 20 mm dá o limite de detecção de 76,9 mm. Subtrair 10 mm dá 86,9 mm, referência para reconhecer a área livre.</p>
+          <details>
+            <summary>Por que usar dois limites?</summary>
+            <p>Se a leitura oscilar entre 79 e 82 mm, o sistema fica entre os limites. Isso evita alternar o estado do motor a cada pequena variação.</p>
+          </details>
+          <a href="documentos/mini-fabrica.pdf">Ler a ficha de bancada (PDF) →</a>
+        </article>
+      </section>
+    </main>
+    <footer>
+      <div class="rodape wrap">
+        <span>Ronald Wolney Willwohl França · Senac · 2024–2026</span>
+        <div class="links">
+          <a href="https://github.com/RonaldinDuCaus">GitHub</a>
+          <a href="https://www.linkedin.com/in/ronald-wolney-willwohl-fran%C3%A7a-411b18274/">LinkedIn</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

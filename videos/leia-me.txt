@@ -1,0 +1,11 @@
+COMO ACRESCENTAR MEU VÍDEO
+
+1. Copie uma gravação que possa divulgar para esta pasta e dê o nome esteira.mp4.
+   Prefira MP4 com vídeo H.264 para abrir nos navegadores usados na escola.
+2. Abra memorias.html em um editor de texto. Perto do fim do conteúdo, encontre o
+   comentário "Para inserir a gravação". Apague a linha inteira que começa com
+   "<!-- Para inserir" e a linha "-->" logo depois de </section>.
+3. Na frase abaixo do vídeo, descreva o que a gravação mostra. Se houver fala
+   importante, inclua também a transcrição ou uma faixa de legendas.
+4. Salve, abra memorias.html no navegador e teste o som e a reprodução.
+5. Compacte novamente a pasta do site e repita o teste depois de extrair o ZIP.

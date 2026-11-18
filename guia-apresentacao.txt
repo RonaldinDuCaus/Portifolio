@@ -1,0 +1,41 @@
+PORTFÓLIO DE RONALD WOLNEY WILLWOHL FRANÇA | SENAC
+Guia para abrir, revisar e apresentar
+
+ABRIR
+Extraia o ZIP inteiro. Abra index.html no navegador. Todo o conteúdo do portfólio
+abre offline. GitHub, LinkedIn e Tinkercad precisam de internet.
+
+COMO AS PASTAS SE ORGANIZAM
+Na raiz ficam as sete páginas. Elas usam a mesma folha css/estilo.css.
+imagens/ guarda as fotos, a captura do painel e os desenhos explicativos.
+codigos/ traz os registros de programação da garra, da lixeira e do motor.
+documentos/ reúne a ficha de bancada e uma nota de leitura do servidor de visão.
+videos/ está reservada para suas gravações. O leia-me da pasta explica como inseri-las.
+
+ROTEIRO DE APRESENTAÇÃO
+1. Abra o Início. Conte que entrou no Senac em 2024 e que em 2026 está no 3º ano.
+   Explique sua participação mais frequente: montagem, lógica e programação.
+2. Abra Formação Técnica e apresente a esteira. Mostre uma leitura real da ficha
+   de bancada e explique o que os limites de detecção e de rearme mudam no motor.
+   Compare o teste do motor com o estado da integração mostrado na foto do painel.
+3. Em Áreas do Saber, abra “Por que usar dois limites?”. Explique com um exemplo
+   o que acontece com uma leitura entre os dois valores.
+4. Abra index.html em um editor. <nav> agrupa os links; <main> contém o assunto
+   principal; <article> reúne uma ficha independente. Mostre como o link
+   formacao-tecnica.html#esteira encontra o elemento com id="esteira".
+5. Abra css/estilo.css. Em :root, localize as cores. Em .grade, veja as três
+   colunas do Grid. No @media de 760px, veja a mudança para uma coluna.
+   Diminua a janela para mostrar. A classe .links usa Flexbox para permitir que
+   os links passem para a linha de baixo. <details> e <summary> abrem e fecham
+   uma explicação pelo próprio navegador. O site dispensa JavaScript.
+6. Termine com um próximo teste concreto: acompanhar uma peça, do sensor até a
+   fotografia e a resposta do modelo, e guardar evidência do ciclo completo.
+
+ANTES DA ENTREGA
+Leia as descrições em primeira pessoa e ajuste qualquer trecho à sua experiência.
+Confira na Jornada a pesquisa de mobilidade de 2024, o Robô Walter e a OBI de 2025.
+Os itens 6 a 11 da rubrica não foram transcritos no enunciado disponível.
+Confira a folha do professor ao fazer a revisão final.
+Se acrescentar materiais, inclua apenas os que você pode divulgar.
+Compacte o conteúdo com index.html na raiz. Extraia o novo ZIP em outra pasta
+e confira as sete páginas e o material novo antes de enviar.

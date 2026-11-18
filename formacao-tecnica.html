@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Formação Técnica no portfólio de Ronald Wolney Willwohl França, estudante de Internet das Coisas no Senac.">
+    <title>Formação Técnica | Ronald Wolney Willwohl França</title>
+    <link rel="stylesheet" href="css/estilo.css">
+  </head>
+  <body>
+    <a class="skip" href="#principal">Pular para o conteúdo</a>
+    <!-- O menu é HTML comum. aria-current indica a página aberta para leitores de tela. -->
+    <header>
+      <div class="barra wrap">
+        <a class="marca" href="index.html" aria-label="Portfólio de Ronald, início">
+          <b aria-hidden="true">RW</b> Portfólio</a>
+        <nav aria-label="Navegação principal">
+          <a href="index.html">Início</a>
+          <a href="areas-do-saber.html">Áreas do Saber</a>
+          <a href="formacao-tecnica.html" aria-current="page">Formação Técnica</a>
+          <a href="curriculo.html">Currículo</a>
+          <a href="memorias.html">Memórias</a>
+          <a href="jornada.html">Jornada de Aprendizagem</a>
+          <a href="contato.html">Contato</a>
+        </nav>
+      </div>
+    </header>
+    <!-- As páginas ficam no mesmo nível. Caminhos relativos também funcionam depois de extrair o ZIP. -->
+    <main id="principal" class="wrap">
+      <div class="intro">
+        <p class="micro">Internet das Coisas</p>
+        <h1>Formação Técnica</h1>
+        <p class="lead">Da leitura de um sensor até a resposta de um motor. Estas fichas reúnem o objetivo de cada projeto, a lógica utilizada e o registro que permite conferir o funcionamento.</p>
+      </div>
+      <div class="atalhos" aria-label="Projetos nesta página">
+        <a href="#conhecimentos">Conhecimentos técnicos</a>
+        <a href="#esteira">Mini Fábrica</a>
+        <a href="#camera">Identificador de imagens</a>
+        <a href="#lixeira">Lixeira automática</a>
+        <a href="#walter">Robô Walter</a>
+      </div>
+      <!-- Cada conhecimento aponta para um projeto ou material que permite conferir o exemplo. -->
+      <section class="projeto" aria-labelledby="conhecimentos">
+        <h2 id="conhecimentos">Conhecimentos técnicos</h2>
+        <dl>
+          <dt>Internet das Coisas (IoT)</dt>
+          <dd>Na <a href="#esteira">Mini Fábrica</a>, o ESP32 lê o sensor de distância e comanda o motor para parar a correia quando uma peça chega.</dd>
+          <dt>Redes de computadores</dt>
+          <dd>No <a href="#camera">identificador de imagens</a>, a ESP32-CAM se conecta por Wi-Fi e envia uma foto por HTTP a um servidor local. O nome do objeto volta pela rede para aparecer no display.</dd>
+          <dt>Programação em C</dt>
+          <dd>Variáveis e condições permitem decidir o que fazer a partir de uma leitura. No <a href="codigos/lixeira.cpp">código da lixeira</a>, escrito em C++ para Arduino, a condição <code>distancia &gt; 0 &amp;&amp; distancia &lt;= distanciaLimite</code> aplica essa lógica para decidir quando abrir a tampa.</dd>
+          <dt>Programação em Java</dt>
+          <dd>No projeto <a href="https://github.com/RonaldinDuCaus/produto-api/blob/main/src/main/java/com/exemplo/produtoapi/controller/ProdutoController.java">produto-api</a>, a classe Produto guarda nome, preço e quantidade. O controlador recebe pedidos para cadastrar, consultar, atualizar e excluir produtos.</dd>
+          <dt>HTML e CSS</dt>
+          <dd>No próprio portfólio, o HTML organiza o menu, os títulos e as fichas de projeto. Na <a href="css/estilo.css">folha de estilos</a>, o CSS Grid coloca os cartões lado a lado no computador e em uma coluna no celular.</dd>
+        </dl>
+      </section>
+      <article id="esteira" class="projeto">
+        <div class="ficha">
+          <div>
+            <p class="micro">Grupo 2 · Projeto integrador</p>
+            <h2>Mini Fábrica Inteligente</h2>
+            <p>O objetivo da equipe é transportar um componente, detectar sua chegada e parar a correia para a câmera fotografá-lo.</p>
+            <dl>
+              <dt>Materiais e tecnologias</dt>
+              <dd>ESP32, motor DC, ponte H TB6612FNG, sensor ultrassônico e ESP32-CAM. O projeto integrado também prevê API, catálogo de componentes e reconhecimento com YOLOv8.</dd>
+              <dt>Funcionamento na bancada</dt>
+              <dd>Na versão de controle local, o operador calibra a esteira vazia e autoriza o início. Quando a peça entra na zona de detecção, o motor pausa por cinco segundos. A correia retoma o movimento e o sensor espera a área ficar livre para rearmar.</dd>
+              <dt>Desafio e resultado</dt>
+              <dd>A leitura varia mesmo com a esteira vazia. A calibração usa 32 amostras e dois limites de distância. Houve registro de detecção e retomada na bancada. No painel integrado, a câmera apareceu online enquanto o controlador ainda estava sem telemetria.</dd>
+              <dt>Aprendizado e próximo teste</dt>
+              <dd>Testar o motor isolado facilita localizar falhas. A próxima verificação é acompanhar a mesma peça desde a detecção até a fotografia e a resposta do modelo treinado.</dd>
+            </dl>
+            <div class="links">
+              <a href="documentos/mini-fabrica.pdf">Ficha de bancada (PDF)</a>
+              <a href="codigos/teste-motor.ino">Código do teste de motor</a>
+              <a href="https://github.com/RonaldinDuCaus/EsteiraV2">Repositório ↗</a>
+            </div>
+          </div>
+          <div>
+            <figure>
+              <img src="imagens/esteira.webp" alt="Desenho da disposição de uma correia, de uma câmera e de um motor.">
+              <figcaption>Ilustração do ciclo. As medidas e os testes estão na ficha de bancada.</figcaption>
+            </figure>
+            <details>
+              <summary>Entender um trecho do programa</summary>
+              <pre>
+                <code>if (agora - ultimaMudanca &gt;= INTERVALO_MS) {
+  ultimaMudanca = agora;</code>
+              </pre>
+              <p>No primeiro teste, o ESP32 consulta o relógio e compara o tempo decorrido com 5.000 ms. Ao alcançar esse intervalo, o programa alterna o estado do motor.</p>
+            </details>
+          </div>
+        </div>
+      </article>
+      <article id="camera" class="projeto">
+        <div class="ficha">
+          <div>
+            <p class="micro">Visão computacional · Rede local</p>
+            <h2>Identificador de imagens</h2>
+            <p>Reconhecer um objeto e devolver seu nome em duas formas, no display e por voz.</p>
+            <dl>
+              <dt>Materiais e tecnologias</dt>
+              <dd>ESP32-CAM, LCD 16×2, Wi-Fi e computador com Python, Flask, YOLOv8 e pyttsx3.</dd>
+              <dt>Como funciona</dt>
+              <dd>A câmera envia a imagem por HTTP. O servidor processa a foto, traduz os nomes cadastrados e devolve o resultado à placa. O computador também pronuncia o nome.</dd>
+              <dt>Desafio e aprendizado</dt>
+              <dd>A fala pode demorar mais que a resposta HTTP. O servidor usa uma tarefa separada para o áudio. O código também define uma resposta quando nenhuma caixa de detecção é encontrada.</dd>
+            </dl>
+            <div class="links">
+              <a href="https://github.com/RonaldinDuCaus/Identificador-de-Imagens/blob/main/server.py">Ver o servidor Python ↗</a>
+              <a href="documentos/fluxo-camera.txt">Ler o fluxo offline</a>
+            </div>
+          </div>
+          <div>
+            <figure>
+              <img src="imagens/camera.webp" alt="Ilustração de um módulo com câmera e conector.">
+              <figcaption>ESP32-CAM · ilustração do módulo utilizado.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </article>
+      <article id="lixeira" class="projeto">
+        <div class="ficha">
+          <div>
+            <p class="micro">Arduino · Sensor e atuador</p>
+            <h2>Lixeira automática</h2>
+            <p>Abrir a tampa com a aproximação da mão.</p>
+            <dl>
+              <dt>Materiais e tecnologias</dt>
+              <dd>Arduino Uno, HC-SR04, microservo SG90, protoboard, jumpers e estrutura da lixeira.</dd>
+              <dt>Como funciona</dt>
+              <dd>O Arduino calcula a distância a partir do eco. Com uma leitura positiva de até 15 cm, o programa manda o servo abrir, aguarda cinco segundos e fecha a tampa.</dd>
+              <dt>Desafio e aprendizado</dt>
+              <dd>O eco pode retornar zero. A condição distancia &gt; 0 impede que uma leitura sem eco seja tratada como uma mão encostada no sensor. O código e o circuito virtual registram a solução.</dd>
+            </dl>
+            <div class="links">
+              <a href="codigos/lixeira.cpp">Ler o código local</a>
+              <a href="https://github.com/RonaldinDuCaus/Lixeira-Automatica-com-arduino">Repositório ↗</a>
+              <a href="https://www.tinkercad.com/things/d8ijNhSOEgd-projeto-lixeira-automatica-iot03">Circuito no Tinkercad ↗</a>
+            </div>
+          </div>
+          <div>
+            <figure>
+              <img src="imagens/lixeira.webp" alt="Desenho de uma lixeira com a tampa aberta e o sensor na frente.">
+              <figcaption>Ilustração do mecanismo de abertura.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </article>
+      <article id="walter" class="projeto">
+        <div class="ficha">
+          <div>
+            <p class="micro">Robótica · Controle manual</p>
+            <h2>Garra do Robô Walter</h2>
+            <p>Em 2025 e 2026, o grupo trabalhou em um robô para auxiliar pessoas com mobilidade reduzida a alcançar objetos pequenos ou caídos no chão. O controle inicial é manual. O uso de celular e IA foi proposto para uma etapa futura.</p>
+            <dl>
+              <dt>Materiais e tecnologias</dt>
+              <dd>Dois joysticks, quatro servos, entradas analógicas e programação com a biblioteca Servo no projeto original.</dd>
+              <dt>Lógica e resultado no código</dt>
+              <dd>Valores abaixo de 300, entre 300 e 700 e acima de 700 selecionam três posições. Os sentidos variam conforme o eixo. Na posição central, o servo recebe 90°.</dd>
+              <dt>Aprendizado</dt>
+              <dd>A faixa central mantém a garra em repouso mesmo quando o joystick volta a um valor ligeiramente diferente do centro.</dd>
+            </dl>
+            <div class="links">
+              <a href="codigos/garra.cpp">Ler o código local</a>
+              <a href="https://github.com/RonaldinDuCaus/Robo-Walter">Repositório ↗</a>
+            </div>
+          </div>
+          <div>
+            <div class="bloco">
+              <p class="micro">Exemplo do eixo X1</p>
+              <pre>
+                <code>if (x1 &lt; 300) {
+  pos8 = 180;
+} else if (x1 &gt; 700) {
+  pos8 = 0;
+} else {
+  pos8 = 90;
+}</code>
+              </pre>
+              <p>O eixo horizontal do primeiro joystick controla o servo ligado ao pino 8.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+    </main>
+    <footer>
+      <div class="rodape wrap">
+        <span>Ronald Wolney Willwohl França · Senac · 2024–2026</span>
+        <div class="links">
+          <a href="https://github.com/RonaldinDuCaus">GitHub</a>
+          <a href="https://www.linkedin.com/in/ronald-wolney-willwohl-fran%C3%A7a-411b18274/">LinkedIn</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

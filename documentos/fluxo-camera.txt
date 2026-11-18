@@ -1,0 +1,21 @@
+IDENTIFICADOR DE IMAGENS — NOTA DE LEITURA DO CÓDIGO
+Ronald Wolney Willwohl França | Ensino Médio Técnico em IoT | Senac
+
+Objetivo
+Identificar um objeto fotografado e comunicar o resultado no LCD e em voz alta.
+
+Caminho da informação
+1. A ESP32-CAM captura a foto.
+2. A placa envia os bytes ao servidor local com uma requisição HTTP.
+3. A rota /detectar verifica se a imagem chegou. O Pillow converte a imagem para RGB.
+4. O modelo YOLOv8 verifica se há objetos. Quando há detecções, o código escolhe
+   a classe da primeira caixa. A lista de traduções cobre os nomes cadastrados.
+5. O computador sintetiza a fala e devolve o resultado à placa para exibição.
+
+Uma escolha para explicar
+A fala ocorre em uma tarefa separada. Isso permite iniciar a leitura em voz alta
+sem obrigar a placa a esperar o fim de toda a frase para receber o resultado.
+O código comprova o fluxo programado. Não há medição de acurácia nesta ficha.
+
+Fonte do projeto
+https://github.com/RonaldinDuCaus/Identificador-de-Imagens/blob/main/server.py

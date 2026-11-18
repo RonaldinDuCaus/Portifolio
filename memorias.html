@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Memórias no portfólio de Ronald Wolney Willwohl França, estudante de Internet das Coisas no Senac.">
+    <title>Memórias | Ronald Wolney Willwohl França</title>
+    <link rel="stylesheet" href="css/estilo.css">
+  </head>
+  <body>
+    <a class="skip" href="#principal">Pular para o conteúdo</a>
+    <!-- O menu é HTML comum. aria-current indica a página aberta para leitores de tela. -->
+    <header>
+      <div class="barra wrap">
+        <a class="marca" href="index.html" aria-label="Portfólio de Ronald, início">
+          <b aria-hidden="true">RW</b> Portfólio</a>
+        <nav aria-label="Navegação principal">
+          <a href="index.html">Início</a>
+          <a href="areas-do-saber.html">Áreas do Saber</a>
+          <a href="formacao-tecnica.html">Formação Técnica</a>
+          <a href="curriculo.html">Currículo</a>
+          <a href="memorias.html" aria-current="page">Memórias</a>
+          <a href="jornada.html">Jornada de Aprendizagem</a>
+          <a href="contato.html">Contato</a>
+        </nav>
+      </div>
+    </header>
+    <!-- As páginas ficam no mesmo nível. Caminhos relativos também funcionam depois de extrair o ZIP. -->
+    <main id="principal" class="wrap">
+      <div class="intro">
+        <p class="micro">Caderno de registros</p>
+        <h1>Memórias</h1>
+        <p class="lead">Do projeto social do primeiro ano aos testes de eletrônica, estes são alguns registros que marcaram meu percurso no Senac.</p>
+      </div>
+      <section class="duas conteudo" aria-label="Registros de aprendizagem">
+        <article class="registro">
+          <a href="imagens/placa-led-1.jpg" aria-label="Ampliar imagem de Lendo uma placa de LEDs">
+            <img class="" src="imagens/placa-led-1.jpg" alt="Recorte de uma placa em formato de coração com LEDs e símbolos de polaridade.">
+          </a>
+          <p class="micro">Fotografia · Eletrônica</p>
+          <h2>Lendo uma placa de LEDs</h2>
+          <p>Antes de colocar um LED, é preciso ler a marcação na placa. Nesta atividade, a dúvida era qual perna correspondia a cada lado do símbolo. A barra indica o cátodo do LED.</p>
+          <div class="links">
+            <a href="imagens/placa-led-2.jpg">Ver detalhe da marcação →</a>
+          </div>
+        </article>
+        <article class="registro">
+          <a href="imagens/painel-esteira.png" aria-label="Ampliar imagem de A câmera apareceu online">
+            <img class="painel" src="imagens/painel-esteira.png" alt="Captura do painel da esteira com câmera online e controlador sem comunicação recente.">
+          </a>
+          <p class="micro">Captura de tela · Mini Fábrica</p>
+          <h2>A câmera apareceu online</h2>
+          <p>O painel mostrava a câmera online e a esteira sem telemetria recente. Esse registro ajuda a separar o diagnóstico da câmera do diagnóstico do motor e da conexão do controlador.</p>
+          <div class="links">
+            <a href="formacao-tecnica.html#esteira">Rever o projeto →</a>
+          </div>
+        </article>
+        <article class="registro" id="mobilidade">
+          <p class="micro">2024 · Projeto social</p>
+          <h2>Como os jovens chegam ao Senac?</h2>
+          <p>Essa pergunta guiou as entrevistas do nosso grupo. Conversamos com estudantes sobre a rotina e as formas de deslocamento. Depois, reunimos os relatos em um blog para mostrar as diferentes realidades de quem frequenta a mesma escola.</p>
+        </article>
+        <article class="registro">
+          <p class="micro">2025 · Programação</p>
+          <h2>Minha participação na OBI</h2>
+          <p>Chegar à 3ª fase da Olimpíada Brasileira de Informática foi uma conquista do segundo ano. O reconhecimento da Sociedade Brasileira de Computação está registrado no meu currículo, com data de 18 de novembro de 2025.</p>
+          <div class="links">
+            <a href="curriculo.html">Ver formação e cursos →</a>
+          </div>
+        </article>
+      </section>
+      <!-- Para inserir a gravação, copie o arquivo para videos/ e retire os sinais de comentário do bloco abaixo.
+<section class="secao">
+  <h2>O ciclo da esteira em vídeo</h2>
+  <video controls playsinline preload="metadata" aria-label="Demonstração da esteira">
+    <source src="videos/esteira.mp4" type="video/mp4">
+  </video>
+  <p>Descreva aqui as etapas que aparecem na sua gravação.</p>
+</section>
+-->
+    </main>
+    <footer>
+      <div class="rodape wrap">
+        <span>Ronald Wolney Willwohl França · Senac · 2024–2026</span>
+        <div class="links">
+          <a href="https://github.com/RonaldinDuCaus">GitHub</a>
+          <a href="https://www.linkedin.com/in/ronald-wolney-willwohl-fran%C3%A7a-411b18274/">LinkedIn</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
